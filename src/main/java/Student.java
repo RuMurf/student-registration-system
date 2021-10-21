@@ -11,9 +11,11 @@ public class Student {
 
     public Student() { }
 
-    public Student(String name, int age, String dob) {
+    public Student(String name, int age, String dob, String id) {
         this.name = name;
         this.age = age;
+        this.dob = dob;
+        this.id = id;
         this.username = getUsername();
     }
 

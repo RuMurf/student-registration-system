@@ -8,6 +8,11 @@ public class Module {
 
     public Module () {}
 
+    public Module(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
