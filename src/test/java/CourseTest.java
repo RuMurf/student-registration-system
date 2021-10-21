@@ -12,7 +12,7 @@ class CourseTest {
 
     @Test
     void getName() {
-        assertEquals("ComputerScience", course.getName());
+        assertEquals("Computer Science", course.getName());
     }
 
     @Test
