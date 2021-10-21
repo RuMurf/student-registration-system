@@ -11,6 +11,12 @@ public class Student {
 
     public Student() { }
 
+    public Student(String name, int age, String dob) {
+        this.name = name;
+        this.age = age;
+        this.username = getUsername();
+    }
+
     public String getName() {
         return name;
     }
@@ -44,8 +50,7 @@ public class Student {
     }
 
     public String getUsername() {
-        username = name+age;
-        return username;
+        return name + age;
     }
 
     public void setUsername(String username) {

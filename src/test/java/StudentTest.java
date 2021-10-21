@@ -1,14 +1,20 @@
-import org.junit.jupiter.api.Test;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentTest {
-    @Test
-    void testStudent() {
-        Student student = new Student();
-        student.setName("John");
-        student.setAge(19);
+    private Student student;
 
-        assertEquals("John19", student.getUsername());
+    @BeforeEach
+    void setUp() {
+        student = new Student("John", 19, "23-12-1999");
     }
 
+    @Test
+    @DisplayName("Username Test")
+    void testUsername() {
+        assertEquals(student.getName()+student.getAge(), student.getUsername());
+    }
 }
