@@ -16,7 +16,7 @@ public class Student {
         this.age = age;
         this.dob = dob;
         this.id = id;
-        this.username = getUsername();
+        setUsername(name, age);
     }
 
     public String getName() {
@@ -52,11 +52,11 @@ public class Student {
     }
 
     public String getUsername() {
-        return name + age;
+        return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String name, int age) {
+        this.username = name+age;
     }
 
     public ArrayList<Course> getCourses() {
