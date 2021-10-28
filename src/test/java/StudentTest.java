@@ -16,6 +16,13 @@ public class StudentTest {
     @DisplayName("Username Test")
     void testUsername() {
         assertEquals(student.getName()+student.getAge(), student.getUsername());
+        assertEquals("John19", student.getUsername());
+    }
+
+    @Test
+    void setUsername() {
+        student.setUsername("Paddy", 21);
+        assertEquals("Paddy21", student.getUsername());
     }
 
     @Test
