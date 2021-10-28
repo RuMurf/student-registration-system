@@ -54,4 +54,15 @@ public class Course {
     public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
     }
+
+    @Override
+    public String toString() {
+        String modulesString = "";
+        for (Module module : this.modules) {
+            modulesString += module.getName()+", ";
+        }
+        modulesString = modulesString.substring(0, modulesString.length() - 2);
+
+        return "Course: "+name+"\nModules: "+modulesString+"\nStart Date: "+startDate.dayOfMonth().get()+"/"+startDate.monthOfYear().get()+"/"+startDate.year().get()+"\nEnd Date: "+endDate.dayOfMonth().get()+"/"+ endDate.monthOfYear().get()+"/"+ endDate.year().get()+"\n";
+    }
 }

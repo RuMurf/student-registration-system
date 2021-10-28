@@ -44,4 +44,22 @@ public class Module {
     public void setCourses(ArrayList<Course> courses) {
         this.courses = courses;
     }
+
+    @Override
+    public String toString() {
+        String courseString = "";
+        String studentString = "";
+
+        for (Course course : this.courses) {
+            courseString += course.getName()+", ";
+        }
+        courseString = courseString.substring(0, courseString.length() - 2);
+
+        for (Student student : this.students) {
+            studentString += student.getName()+", ";
+        }
+        studentString = studentString.substring(0, studentString.length() - 2);
+
+        return "Module: "+name+"\nCourses: "+courseString+"\nModule ID: "+id+"\nStudents: "+studentString+"\n";
+    }
 }
